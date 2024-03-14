@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: mycomputeragent
 
 steps:
 - script: echo K8S Terraform Azure!
