@@ -19,8 +19,8 @@ stages:
   jobs:  
   - job: Build
     displayName: Build
-    pool:
-      vmImage: 'ubuntu-latest'
+    pool: mycomputeragent
+      
     steps:
     - task: Docker@2
       inputs:
@@ -44,8 +44,7 @@ stages:
   jobs:  
   - job: Deploy
     displayName: Deploy
-    pool:
-      vmImage: 'ubuntu-latest'
+    pool: mycomputeragent
     steps:
     - task: DownloadPipelineArtifact@2
       inputs:
